@@ -10,6 +10,9 @@ dotenv.config();
 
 const app = express();
 
+// JSON
+app.use(express.json());
+
 // CORS
 const allowedOrigins = [
   "http://localhost:5173",
@@ -30,21 +33,6 @@ app.use(
   })
 );
 
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true,
-  })
-);
-// JSON
-app.use(express.json());
-
 // Database
 connectDB();
 
@@ -63,7 +51,5 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(
-    `Server running on http://localhost:${PORT}`
-  );
+  console.log(`Server running on port ${PORT}`);
 });
