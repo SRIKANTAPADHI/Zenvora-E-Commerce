@@ -13,7 +13,7 @@ const app = express();
 // CORS
 app.use(
   cors({
-    origin: "http://localhost:5173",
+     origin: "https://zenvora-e-commerce.vercel.app",
     credentials: true,
   })
 );
