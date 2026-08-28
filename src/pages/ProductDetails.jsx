@@ -4,7 +4,7 @@ import { useCart } from "../context/CartContext";
 import { Navigate } from "react-router-dom";
 
 function ProductDetails() {
-const { id } = useParams();
+  const { id } = useParams();
 
   const { addToCart } = useCart();
 
@@ -126,14 +126,16 @@ const { id } = useParams();
             >
               Add to Cart
             </button>
-
             <button
               disabled={!product.inStock}
-              onClick={() => navigate("/checkout")}
+              onClick={() => {
+                addToCart(product);
+                navigate("/checkout");
+              }}
               className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold disabled:bg-gray-300"
             >
               Buy Now
-            </button>
+            </button>{" "}
           </div>
         </div>
       </div>
