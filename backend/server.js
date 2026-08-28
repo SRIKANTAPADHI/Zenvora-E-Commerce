@@ -11,13 +11,23 @@ dotenv.config();
 const app = express();
 
 // CORS
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://zenvora-e-commerce.vercel.app",
+];
+
 app.use(
   cors({
-     origin: "https://zenvora-e-commerce.vercel.app",
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
-
 // JSON
 app.use(express.json());
 
