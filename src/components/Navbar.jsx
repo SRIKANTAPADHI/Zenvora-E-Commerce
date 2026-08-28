@@ -388,7 +388,8 @@ function Navbar() {
           to="/wishlist"
           className="
             relative
-            hover:border
+            hidden
+            md:hover:border
             border-white
             p-2
             shrink-0
@@ -404,7 +405,8 @@ function Navbar() {
           to="/cart"
           className="
             cart
-            flex
+            hidden
+           md:flex
             items-center
             gap-1
             cursor-pointer
