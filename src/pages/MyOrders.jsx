@@ -19,7 +19,7 @@ function MyOrders() {
 
       try {
         const response = await fetch(
-          "http://localhost:5000/api/orders/myorders",
+          "https://zenvora-e-commerce-2.onrender.com/api/orders/myorders",
           {
             headers: {
               Authorization: `Bearer ${token}`,

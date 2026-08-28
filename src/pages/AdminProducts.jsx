@@ -15,7 +15,7 @@ const [deleting, setDeleting] = useState(false);
   const fetchProducts = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/products/admin/all",
+        "https://zenvora-e-commerce-2.onrender.com/api/products/admin/all",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -55,7 +55,7 @@ const [deleting, setDeleting] = useState(false);
     setDeleting(true);
 
     const response = await fetch(
-      `http://localhost:5000/api/products/${deleteId}`,
+      `https://zenvora-e-commerce-2.onrender.com/api/products/${deleteId}`,
       {
         method: "DELETE",
         headers: {

@@ -29,7 +29,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        "https://zenvora-e-commerce-2.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {

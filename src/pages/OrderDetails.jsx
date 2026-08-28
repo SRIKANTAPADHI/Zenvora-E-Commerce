@@ -14,7 +14,7 @@ function OrderDetails() {
     const fetchOrder = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/orders/${id}`,
+          `https://zenvora-e-commerce-2.onrender.com/api/orders/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

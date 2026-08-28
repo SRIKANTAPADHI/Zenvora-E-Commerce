@@ -16,7 +16,7 @@ function AdminOrders() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/orders/admin/all",
+        "https://zenvora-e-commerce-2.onrender.com/api/orders/admin/all",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -52,7 +52,7 @@ function AdminOrders() {
       setUpdatingId(orderId);
 
       const response = await fetch(
-        `http://localhost:5000/api/orders/${orderId}/status`,
+        `https://zenvora-e-commerce-2.onrender.com/api/orders/${orderId}/status`,
         {
           method: "PUT",
 

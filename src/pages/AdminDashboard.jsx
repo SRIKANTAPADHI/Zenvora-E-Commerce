@@ -23,7 +23,7 @@ const [error, setError] = useState("");
         setLoadingProducts(true);
 
         const response = await fetch(
-          "http://localhost:5000/api/products"
+          "https://zenvora-e-commerce-2.onrender.com/api/products"
         );
 
         if (!response.ok) {
@@ -52,7 +52,7 @@ const [error, setError] = useState("");
         setLoadingOrders(true);
 
         const response = await fetch(
-          "http://localhost:5000/api/orders",
+          "https://zenvora-e-commerce-2.onrender.com/api/orders",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -91,7 +91,7 @@ const [error, setError] = useState("");
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/products/${id}`,
+        `https://zenvora-e-commerce-2.onrender.com/api/products/${id}`,
         {
           method: "DELETE",
           headers: {

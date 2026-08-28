@@ -13,7 +13,7 @@ function Home() {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/products"
+          "https://zenvora-e-commerce-2.onrender.com/api/products"
         );
 
         if (!response.ok) {
