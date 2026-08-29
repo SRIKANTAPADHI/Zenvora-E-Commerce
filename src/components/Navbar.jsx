@@ -387,8 +387,9 @@ function Navbar() {
         <Link
           to="/wishlist"
           className="
+          hidden
+          md:block
             relative
-            hidden
             md:hover:border
             border-white
             p-2
@@ -445,10 +446,10 @@ function Navbar() {
             </span>
           )}
 
-
+{/* 
           <span className="hidden sm:block font-bold">
             Cart
-          </span>
+          </span> */}
 
         </Link>
 
